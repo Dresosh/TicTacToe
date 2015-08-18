@@ -1,0 +1,23 @@
+body {
+	background: gray;
+}
+
+.container {
+	display: block;
+	width: 612px;
+	height: 612px;
+	margin: auto;
+}
+
+.heading {
+	font-family: arial;
+	text-align: center;
+}
+
+.box {
+	display: block;
+	width: 200px;
+	height: 200px;
+	border: 2px solid black;
+	float: left;
+}
