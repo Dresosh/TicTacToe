@@ -4,11 +4,15 @@ var button = document.querySelector("button")
 var winConditions = [[0,1,2],[3,4,5],[6,7,8],[0,4,8],[1,4,7],[2,5,8],[0,3,6],[1,4,7],[2,5,8]];
 
 $(boxes).on("click", function(){
-	$(this).on("click", function(){
-		if($(this).html("")){
-			$(this).html("x");
+	if(!this.innerHTML){
+		if(turnCount % 2 === 0){
+			this.innerHTML = "X";
+		} else {
+			this.innerHTML = "O";
 		}
-	});
+		checkWinner(this.innerHTML)
+		turnCount++;
+	} 	
 });
 
 $(button).on("click", function(){
@@ -30,12 +34,3 @@ function checkWinner(player){
 
 
 
-	// if(!this.innerHTML){
-	// 	if(turnCount % 2 === 0){
-	// 		this.innerHTML = "X";
-	// 	} else {
-	// 		this.innerHTML = "O";
-	// 	}
-	// 	checkWinner(this.innerHTML)
-	// 	turnCount++;
-	// } 	
