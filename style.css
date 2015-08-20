@@ -5,7 +5,7 @@ body {
 
 h1 {
 	text-align: center;
-	margin: 100px 0 0 0;
+	margin: 100px 0 10px 0;
 }
 
 .board {
@@ -24,7 +24,31 @@ h1 {
 	line-height:100px;
 }
 
+.box:hover{
+	background: #444;
+}
+
 .button-container {
 	margin-top: 20px;
 	text-align: center
+}
+
+#message {
+	width: 306px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	margin: 20px auto;
+	font-size: 30px;
+	color: red;
+}
+
+.clickedX {
+	background:red;
+	color: white;
+}
+
+.clickedY {
+	background: blue;
+	color: white;
 }
