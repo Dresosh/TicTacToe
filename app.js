@@ -1,9 +1,9 @@
 var turnCount = 0;
-var boxes = document.querySelectorAll(".box");
-var button = document.querySelector("button")
+var $boxes = $(".box");
+var $button = $("button")
 var winConditions = [[0,1,2],[3,4,5],[6,7,8],[0,4,8],[1,4,7],[2,5,8],[0,3,6],[1,4,7],[2,5,8],[2,4,6]];
 
-$(boxes).on("click", function(){
+$boxes.on("click", function(){
 	if($(this).text() === ("")){
 		if(turnCount % 2 === 0){
 			$(this).html("X");
@@ -12,12 +12,12 @@ $(boxes).on("click", function(){
 			$(this).html("O");
 			$(this).addClass("clickedY");
 		}
-		checkWinner(this.innerHTML)
 		turnCount++;
+		checkWinner(this.innerHTML)
 	} 	
 });
 
-$(button).on("click", function(){
+$button.on("click", function(){
 	resetGame();
 });
 
